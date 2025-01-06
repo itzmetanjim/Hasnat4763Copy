@@ -1,0 +1,75 @@
+.Introduction {
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 2cm;
+    margin-left: 3cm ;
+    margin-right:3cm;
+    text-size-adjust: 10cm;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.Nav{
+    text-align: center;
+    text-align: top;
+    text-decoration: none;
+    font-family: Calibri ;
+    color: mediumslateblue;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    margin-left : 3cm;
+    margin-right: 3cm;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline;
+            margin: 1cm;
+        }
+       
+    }
+}
+.tech{
+    color: thistle;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid white;
+    margin-right: 3cm;
+    margin-left: 3cm;
+    border-radius: 5px;
+    margin-top: 3cm;
+}
+.projects{
+    text-align: center;
+    text-align: top;
+    color: thistle;
+}
+.contactinfo{
+    color: thistle;
+    text-align: center;
+    margin-top : 5cm;
+    margin-left:3cm;
+    margin-right:3cm;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+body {
+    background-image: url("Background.png");
+    background-size: cover;
+    background-position: center;
+    font-family: Poppins;
+    font-size: large;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+
