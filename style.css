@@ -71,12 +71,10 @@
         li {
             display: inline;
         }
-       
     }
 }
-
 body {
-    background-image: url("Background.png");
+    background-image: url("background.png");
     background-size: cover;
     background-position: center;
     font-family: Poppins;
