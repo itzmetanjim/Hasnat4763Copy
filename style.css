@@ -1,7 +1,7 @@
 .Introduction {
     font-family: 'Poppins', sans-serif;
     font-size: large;
-    color: whitesmoke;
+    color: mintcream;
     margin: 0;
     padding: 0;
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@
     text-align: top;
     text-decoration: none;
     font-family: Calibri ;
-    color: mediumslateblue;
+    color: silver;
     font-weight: bold;
     background-repeat: no-repeat;
     margin-left : 3cm;
@@ -59,10 +59,24 @@
     margin-right:3cm;
     border: 1px solid white;
     border-radius: 5px;
+    img {
+        width: 50px;
+        height: 50px;
+        margin: 1cm;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline;
+        }
+       
+    }
 }
 
 body {
-    background-image: url("background.png");
+    background-image: url("Background.png");
     background-size: cover;
     background-position: center;
     font-family: Poppins;
@@ -72,4 +86,3 @@ body {
     padding: 0;
     background-repeat: no-repeat;
 }
-
