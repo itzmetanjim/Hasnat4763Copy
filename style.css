@@ -1,6 +1,10 @@
+mark{
+    background-color:lightcyan
+}
+
 .Introduction {
+    font-size: 25px;
     font-family: Verdana ;
-    font-size: larger;
     color: black;
     margin: 0;
     padding: 0;
@@ -9,22 +13,31 @@
     margin-top: 2cm;
     margin-left: 3cm ;
     margin-right:3cm;
-    border: 1px solid white;
+    border: 2px solid black;
     border-radius: 5px;
+
 }
 .Nav{
     text-align: center;
     text-align: top;
     text-decoration: none;
     font-family: Calibri ;
-    font-size: larger;
+    font-size: 32px;
     color: silver;
     font-weight: bold;
     background-repeat: no-repeat;
     margin-left : 3cm;
     margin-right: 3cm;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid black;
     border-radius: 5px;
+    a{
+        text-decoration: none;
+        color:cornsilk
+    }
+    a:hover{
+        background-color: darkslategray;
+        color:black;
+    }
     ul {
         list-style-type: none;
         margin: 0;
@@ -36,56 +49,47 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        li:hover {
-            background-color: black;
-        }
     }
 }
 .tech{
-    font-size: larger;
+    font-size: 25px;
     color: black;
     text-align: center;
     text-decoration: none;
-    border: 2px solid white;
+    border: 2px solid black;
     margin-right: 3cm;
     margin-left: 3cm;
     border-radius: 5px;
     margin-top: 1cm;
 }
 .projects{
-    font-size: larger;
+    font-size: 25px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     text-align: top;
     color: black;
-    border: 2px solid white;
+    border: 2px solid black;
     margin-right: 3cm;
     margin-left: 3cm;
     margin-top: 1cm;
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-            display: inline;
-            margin: 1cm;
-            color: blue;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        li:hover {
-            background-color: black;
-        }
+    a{
+        text-decoration: none;
+        color:cornsilk
+    }
+    a:hover{
+        background-color: darkslategray;
+        color:black;
+        border: 2px solid black;
     }
 }
 .contactinfo{
-    font-size: larger;
+    font-size: 25px;
     color: black;
     text-align: center;
     margin-top : 1cm;
     margin-left:3cm;
     margin-right:3cm;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 5px;
     img {
         width: 50px;
@@ -103,24 +107,23 @@
     }
 }
 body {
-    font-size: larger;
-    background-image: url("backgroundphoto.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
+    font-size: 25px;
     font-family: Poppins;
     font-size: large;
     color: black;
     margin: 0;
     padding: 0;
     background-repeat: no-repeat;
-}
+    background-color: darkslategray;
+    background-position: center;
+    background-size: cover;
+}   
 footer{
+    font-size: 20px;
     text-align: center;
     margin-top: 1cm;
     border: 1px solid black;
     margin-right: 3cm;
     margin-left: 3cm;
-    font-family: "Courier New" ;
-    font-size: large;
+    font-family: "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" ;
 }
