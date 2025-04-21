@@ -1,0 +1,50 @@
+@font-face{
+    font-family: roboto-flex;
+    src: url(fonts/roboto-flex.ttf);
+    font-style: italic;
+}
+@font-face{
+    font-family: playwrite;
+    src: url(fonts/playwrite.ttf);
+}
+
+.heda{
+    text-align: center;
+    font-size: 32px;
+    font-family:roboto-flex;
+}
+.contactinfo{
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    margin-top : 1cm;
+    margin-left:3cm;
+    margin-right:3cm;
+    border:solid black;
+    border-radius: 20px;
+    img{
+        width: 90px;
+        height: 90px;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline;
+        }
+    }
+    a{
+        color: darkslategray;
+    }
+    a:hover{
+        color: darkslategray;
+        cursor: select;
+    }
+}
+body{
+    background-color: darkslategray;
+}
+html{
+    scroll-behavior: smooth;
+}

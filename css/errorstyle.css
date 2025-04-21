@@ -1,0 +1,25 @@
+.error{
+    text-align: center;
+    font-size: 30px;
+}
+
+.rickroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    video{
+        width: 6in;
+        height: 4in;
+    }
+}
+.back{
+    margin-top: 5in;
+    text-align: center;
+    font-size: 2cm;
+    a{
+        color: black;
+    }
+    a:hover{
+        color:aqua;
+    }
+}
