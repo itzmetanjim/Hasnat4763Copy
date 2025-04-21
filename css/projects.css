@@ -1,0 +1,47 @@
+@font-face{
+    font-family: roboto-flex;
+    src: url(fonts/roboto-flex.ttf);
+}
+@font-face{
+    font-family: playwrite;
+    src: url(fonts/playwrite.ttf);
+}
+
+body{
+    text-align: center;
+    background-color: darkslategray;
+    margin-top: 2cm;
+}
+
+.header{
+    font-family: roboto-flex;
+    color: black;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 10px;
+    margin-right: 5cm;
+    margin-left: 5cm;
+    margin-top: 2cm;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+#project{
+    margin-top: 2cm;
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 10px;
+    font-family: playwrite;
+    font-size: 20px;
+    margin-left: 5cm;
+    margin-right: 5cm;
+    a{
+        color: silver;
+    }
+    a:hover{
+        color:black;
+        
+    }
+}
