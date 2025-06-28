@@ -12,7 +12,7 @@
 ![](https://github-readme-streak-stats.herokuapp.com/?user=Hasnat4763&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Hasnat4763&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact)<br/>
 [![](https://github-readme-stats.vercel.app/api/wakatime?username=U086TNY7PE0&api_domain=waka.hackclub.com&bg_color=1A202C&title_color=2F855A&icon_color=2F855A&text_color=ffffff&custom_title=Wakapi%20Week%20Stats&layout=compact)](https://github-readme-stats.hackclub.dev/api/wakatime?username=1271&api_domain=hackatime.hackclub.com&&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8&theme=shadow_green)
-{{ wakatimeDoubleCategoryBar "💾 Languages:" wakatimeData.Languages "💼 Projects:" wakatimeData.Projects 5 }}
+
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=Hasnat4763&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
