@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on nothing<br>🤝 I’m looking for help with<br>🌱 I’m currently learning Python, Raspberry pi architecture
+🔭 I’m currently working on nothing<br>🤝 I’m looking for help with stealing a panzerkamphwagen IV<br>🌱 I’m currently learning Python, Raspberry pi architecture
 
 
 ## 🌐 Socials:
