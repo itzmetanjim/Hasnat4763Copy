@@ -1,3 +1,6 @@
+/* modern typography and design system */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @font-face{
     font-family: roboto-flex;
     src: url(fonts/roboto-flex.ttf);
@@ -8,111 +11,257 @@
     src: url(fonts/playwrite.ttf);
 }
 
+/* css variables for consistent theming */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --bg-primary: #0f0f23;
+    --bg-secondary: #1a1a2e;
+    --bg-card: #16213e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border-color: #2d3748;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-mark{
-    background-color:rgb(102, 153, 153);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    cursor: url(../icons/cursor.cur), auto;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+/* modern navigation */
+.Nav {
+    background: rgba(22, 33, 62, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow-light);
+    position: sticky;
+    top: 2rem;
+    z-index: 100;
+}
+
+.Nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.Nav li {
+    display: flex;
+}
+
+.Nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.Nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.Nav a:hover {
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.Nav a:hover::before {
+    left: 0;
+}
+
+/* modern section styling */
+.Introduction, .tech {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin: 3rem auto;
+    max-width: 900px;
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.Introduction::before, .tech::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
 
 .Introduction {
-    font-size: 25px;
-    font-family: roboto-flex;
-    color: black;
-    margin: 0;
-    padding: 0;
-    background-repeat: no-repeat;
     text-align: center;
-    margin-top: 2cm;
-    margin-left: 3cm ;
-    margin-right:3cm;
-    border: 2px solid black;
-    border-radius: 100px;
+}
 
+.Introduction p {
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    color: var(--text-primary);
 }
-.Nav{
-    text-align: center;
-    text-align: top;
-    text-decoration: none;
-    font-family: Calibri ;
-    font-size: 32px;
-    color: silver;
-    font-weight: bold;
-    background-repeat: no-repeat;
-    margin-left : 3cm;
-    margin-right: 3cm;
-    border: 4px solid black;
-    border-radius: 100px;
-    a{
-        text-decoration: none;
-        color:cornsilk
-    }
-    a:hover{
-        background-color: darkslategray;
-        color:black;
-    }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-            display: inline;
-            margin: 1cm;
-            color: azure;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    }
-}
-.tech{
-    font-size: 25px;
-    font-family: playwrite;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid black;
-    margin-right: 3cm;
-    margin-left: 3cm;
-    border-radius: 100px;
-    margin-top: 1cm;
-}
-body {
-    font-size: 25px;
-    font-family: Poppins;
-    font-size: large;
-    color: black;
-    margin: 0;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-color: darkslategray;
-    background-position: center;
-    background-size: cover;
-    cursor: url(../icons/cursor.cur), auto;
-    
 
-}   
-footer{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 1cm;
-    background-color:darkcyan;
-    backface-visibility: initial;
-    border-radius: 100px;
-    margin-right: 4cm;
-    margin-left: 4cm;
-    font-family: "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" ;
+/* modern mark styling */
+mark {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
-html{
+
+.tech {
+    text-align: center;
+}
+
+.tech h3 {
+    font-size: 28px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.tech p {
+    margin: 2rem 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* icon styling */
+.tech img {
+    margin: 0.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    filter: brightness(0.9);
+}
+
+.tech img:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: var(--shadow-light);
+    filter: brightness(1.1);
+}
+
+/* badge and external image styling */
+.tech img[src*="waka.hackclub.com"],
+.tech img[src*="shields.io"],
+.tech img[src*="pcgamebenchmark.com"] {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+}
+
+/* modern footer */
+footer {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin: 3rem auto 2rem;
+    max-width: 600px;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+    box-shadow: var(--shadow-light);
+}
+
+/* smooth scrolling */
+html {
     scroll-behavior: smooth;
 }
+
+/* custom scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
-::-webkit-scrollbar-track{
-    background: black;
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
 }
-::-webkit-scrollbar-thumb{
-    background: wheat;
-    border-radius: 10px;
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
+    border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover{
-    background: darkcyan;
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(var(--secondary-color), var(--accent-color));
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+    .Nav {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .Nav ul {
+        gap: 1rem;
+    }
+    
+    .Nav a {
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+    }
+    
+    .Introduction, .tech {
+        margin: 2rem 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .tech h3 {
+        font-size: 24px;
+    }
+    
+    .tech img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    footer {
+        margin: 2rem 1rem;
+    }
 }
