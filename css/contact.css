@@ -1,3 +1,6 @@
+/* inheriting modern design system */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @font-face{
     font-family: roboto-flex;
     src: url(fonts/roboto-flex.ttf);
@@ -8,43 +11,150 @@
     src: url(fonts/playwrite.ttf);
 }
 
-.heda{
+/* css variables matching main theme */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --bg-primary: #0f0f23;
+    --bg-secondary: #1a1a2e;
+    --bg-card: #16213e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border-color: #2d3748;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.heda {
+    font-size: 28px;
+    font-weight: 600;
     text-align: center;
-    font-size: 32px;
-    font-family:roboto-flex;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
 }
-.contactinfo{
-    font-size: 25px;
-    color: black;
+
+.contactinfo {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin: 3rem auto;
+    max-width: 700px;
+    padding: 3rem;
     text-align: center;
-    margin-top : 1cm;
-    margin-left:3cm;
-    margin-right:3cm;
-    border:solid black;
-    border-radius: 20px;
-    img{
-        width: 90px;
-        height: 90px;
-    }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-            display: inline;
-        }
-    }
-    a{
-        color: darkslategray;
-    }
-    a:hover{
-        color: darkslategray;
-        cursor: select;
-    }
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
 }
-body{
-    background-color: darkslategray;
+
+.contactinfo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
-html{
+
+.contactinfo p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin: 1.5rem 0;
+}
+
+.contactinfo h2 {
+    font-size: 22px;
+    color: var(--text-primary);
+    margin: 2rem 0 1rem 0;
+    font-weight: 600;
+}
+
+.contactinfo ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.contactinfo li {
+    display: flex;
+}
+
+.contactinfo img {
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    filter: brightness(0.9);
+}
+
+.contactinfo a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.contactinfo a:hover img {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: var(--shadow-light);
+    filter: brightness(1.2);
+    background: rgba(102, 126, 234, 0.1);
+}
+
+/* special styling for email link */
+.contactinfo a[href^="mailto:"] img {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    padding: 1.2rem;
+}
+
+.contactinfo a[href^="mailto:"]:hover img {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+}
+
+html {
     scroll-behavior: smooth;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+    .contactinfo {
+        margin: 2rem 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .contactinfo ul {
+        gap: 1rem;
+    }
+    
+    .contactinfo img {
+        width: 50px;
+        height: 50px;
+        padding: 0.8rem;
+    }
+    
+    .heda {
+        font-size: 24px;
+    }
+    
+    .contactinfo h2 {
+        font-size: 20px;
+    }
 }
