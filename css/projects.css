@@ -1,3 +1,6 @@
+/* inheriting modern design system from main css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @font-face{
     font-family: roboto-flex;
     src: url(fonts/roboto-flex.ttf);
@@ -7,41 +10,142 @@
     src: url(fonts/playwrite.ttf);
 }
 
-body{
-    text-align: center;
-    background-color: darkslategray;
-    margin-top: 2cm;
+/* css variables matching main theme */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --bg-primary: #0f0f23;
+    --bg-secondary: #1a1a2e;
+    --bg-card: #16213e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border-color: #2d3748;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header{
-    font-family: roboto-flex;
-    color: black;
-    font-size: 20px;
-    border: 2px solid black;
-    border-radius: 100px;
-    padding: 10px;
-    margin-right: 5cm;
-    margin-left: 5cm;
-    margin-top: 2cm;
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 2rem 0;
+    min-height: 100vh;
 }
-html{
+
+.header {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.header h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.header h2 {
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin: 1rem 0 0.5rem 0;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+#project {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+#project:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+#project h2 {
+    color: var(--text-primary);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#project p {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+#project a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+#project a:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
+}
+
+html {
     scroll-behavior: smooth;
 }
 
-#project{
-    margin-top: 2cm;
-    border: 2px solid black;
-    border-radius: 100px;
-    padding: 10px;
-    font-family: playwrite;
-    font-size: 20px;
-    margin-left: 5cm;
-    margin-right: 5cm;
-    a{
-        color: silver;
+/* responsive design */
+@media (max-width: 768px) {
+    .header, #project {
+        margin: 1rem;
+        padding: 1.5rem;
     }
-    a:hover{
-        color:black;
-        
+    
+    .header h3 {
+        font-size: 20px;
+    }
+    
+    #project h2 {
+        font-size: 20px;
     }
 }
